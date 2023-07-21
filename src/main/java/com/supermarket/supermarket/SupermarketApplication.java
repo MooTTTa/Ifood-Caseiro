@@ -1,10 +1,11 @@
-package com.supermarket.supermarket.application;
+package com.supermarket.supermarket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = "com.supermarket.supermarket")
+//@ComponentScan({ "com.supermarket.supermarket",
+//		"application.properties",
+//		"application-test.properties"})
 @SpringBootApplication()
 public class SupermarketApplication {
 
