@@ -1,7 +1,7 @@
 package com.supermarket.supermarket.core;
 
-import com.supermarket.supermarket.entities.User;
-import com.supermarket.supermarket.services.UserService;
+import com.supermarket.supermarket.entities.Order;
+import com.supermarket.supermarket.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,19 +14,19 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping(value = "/users")
-public class UserController {
+@RequestMapping(value = "/orders")
+public class OrderController {
     @Autowired
-    UserService userService;
+    private OrderService orderService;
 
     @GetMapping
-    public ResponseEntity<List<User>> findAll(){
-        return ResponseEntity.ok().body(userService.findAll());
+    public ResponseEntity<List<Order>> findAll(){
+        return ResponseEntity.ok().body(orderService.findAll());
     }
 
     @GetMapping(value = "/{id}")
-    public Optional<User> findById(@PathVariable Long id){
-        return ResponseEntity.ok().body(userService.findById(id)).getBody();
+    public Optional<Order> findById(@PathVariable Long id){
+        return ResponseEntity.ok().body(orderService.findById(id)).getBody();
     }
 
 }
