@@ -1,6 +1,7 @@
 package com.supermarket.supermarket.core;
 
 import com.supermarket.supermarket.entities.Order;
+import com.supermarket.supermarket.entities.OrderItem;
 import com.supermarket.supermarket.entities.Product;
 import com.supermarket.supermarket.services.OrderService;
 import com.supermarket.supermarket.services.ProductService;
@@ -22,13 +23,13 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
-    public ResponseEntity<List<Product>> findAll(){
+    public ResponseEntity<List<Product>> findAll() {
         return ResponseEntity.ok().body(productService.findAll());
     }
 
     @GetMapping(value = "/{id}")
-    public Optional<Product> findById(@PathVariable Long id){
+    public Optional<Product> findById(@PathVariable Long id) {
         return ResponseEntity.ok().body(productService.findById(id)).getBody();
     }
-
 }
+
