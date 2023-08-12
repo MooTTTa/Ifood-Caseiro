@@ -89,6 +89,7 @@ public class Order implements Serializable {
 
     public Double getTotal() {
         double sum = 0.0;
+        //items.forEach(x -> sum += x.getSubTotal()); em lambda
         for (OrderItem x : items) {
             sum += x.getSubTotal();
         }
