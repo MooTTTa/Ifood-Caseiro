@@ -22,7 +22,7 @@ public class UserController {
         return ResponseEntity.ok().body(userService.findAll());
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping("/{id}")
     public Optional<User> findById(@PathVariable Long id){
         return ResponseEntity.ok().body(userService.findById(id)).getBody();
     }
@@ -31,6 +31,11 @@ public class UserController {
     public ResponseEntity<User> insert(@RequestBody User user){
         return ResponseEntity.created(ServletUriComponentsBuilder.fromCurrentRequest().path("/id")
                 .buildAndExpand(user.getId()).toUri()).body(userService.insert(user));
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id){
+        userService.delete(id);
     }
 
 }
