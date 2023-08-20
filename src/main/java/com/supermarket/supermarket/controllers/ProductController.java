@@ -1,9 +1,6 @@
-package com.supermarket.supermarket.core;
+package com.supermarket.supermarket.controllers;
 
-import com.supermarket.supermarket.entities.Order;
-import com.supermarket.supermarket.entities.OrderItem;
 import com.supermarket.supermarket.entities.Product;
-import com.supermarket.supermarket.services.OrderService;
 import com.supermarket.supermarket.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
-@RequestMapping(value = "/products")
+@RequestMapping(value = "/product")
 public class ProductController {
+
     @Autowired
     private ProductService productService;
 

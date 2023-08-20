@@ -1,4 +1,4 @@
-package com.supermarket.supermarket.core;
+package com.supermarket.supermarket.controllers;
 
 import com.supermarket.supermarket.dto.OrderDTO;
 import com.supermarket.supermarket.entities.Order;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
-@RequestMapping(value = "/orders")
+@RequestMapping(value = "/order")
 public class OrderController {
+
     @Autowired
     private OrderService orderService;
 
@@ -28,7 +28,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public Order cadastrarOrder(@RequestBody OrderDTO orderDTO){
+    public Order RegisterOrder(@RequestBody OrderDTO orderDTO){
         return orderService.insert(orderDTO);
     }
 }

@@ -1,4 +1,4 @@
-package com.supermarket.supermarket.core;
+package com.supermarket.supermarket.controllers;
 
 import com.supermarket.supermarket.entities.User;
 import com.supermarket.supermarket.services.UserService;
@@ -10,10 +10,10 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/user")
 public class UserController {
+
     @Autowired
     UserService userService;
 

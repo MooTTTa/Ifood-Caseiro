@@ -1,7 +1,11 @@
 *********** Projeto web services com Spring Boot e JPA / Hibernate ***********
 
-Sistema criado pra auxiliar usuarios a fazer suas compras e fazer seus pedidos;
-http://localhost:8080/h2-console/
+============================ Ifood-Caseiro =========================================
+
+Sistema criado pra auxiliar usuarios a se registrarem e realizar pedidos;
+Mecanismos para inserir/alterar/deletar dados de usuarios.
+Mecanismo para inserir/alterar o estado do pedido(order).
+
 Objetivos:
 - Criar projeto Spring Boot Java
 - Implementar modelo de domínio
@@ -10,3 +14,7 @@ Objetivos:
 - Povoar o banco de dados
 - CRUD - Create, Retrieve, Update, Delete
 - Tratamento de exceções
+
+Link BD h2: http://localhost:8080/h2-console/
+
+Collections ja monstadas no diretorio.
