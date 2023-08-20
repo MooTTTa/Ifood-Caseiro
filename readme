@@ -1,0 +1,12 @@
+*********** Projeto web services com Spring Boot e JPA / Hibernate ***********
+
+Sistema criado pra auxiliar usuarios a fazer suas compras e fazer seus pedidos;
+http://localhost:8080/h2-console/
+Objetivos:
+- Criar projeto Spring Boot Java
+- Implementar modelo de domínio
+- Estruturar camadas lógicas: controller, service, repository
+- Configurar banco de dados de teste (H2)
+- Povoar o banco de dados
+- CRUD - Create, Retrieve, Update, Delete
+- Tratamento de exceções
