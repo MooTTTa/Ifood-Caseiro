@@ -1,7 +1,5 @@
 package com.supermarket.supermarket.dto;
 
-import com.supermarket.supermarket.entities.OrderItem;
-import com.supermarket.supermarket.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,8 +12,10 @@ import java.util.Set;
 @AllArgsConstructor
 public class OrderDTO {
 
-    private User client;
+    private Long client_id;
 
-    private Set<OrderItem> items;
+    private Long product_id;
+
+    private Integer quantity;
 
 }

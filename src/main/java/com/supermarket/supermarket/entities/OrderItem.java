@@ -2,14 +2,12 @@ package com.supermarket.supermarket.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.supermarket.supermarket.entities.pk.OrderItemPK;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
 import java.util.Objects;
-
+import java.util.Optional;
 
 
 @Entity
@@ -31,6 +29,7 @@ public class OrderItem implements Serializable {
         this.quantity = quantity;
         this.price = price;
     }
+
 
     @JsonIgnore
     public Order getOrder() {

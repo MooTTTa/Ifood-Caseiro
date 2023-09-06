@@ -28,7 +28,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public Order RegisterOrder(@RequestBody OrderDTO orderDTO){
+    public Object RegisterOrder(@RequestBody OrderDTO orderDTO){
         return orderService.insert(orderDTO);
     }
 }
